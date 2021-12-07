@@ -1,1 +1,110 @@
-asdfa
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project
+$ git init
+Initialized empty Git repository in C:/Users/ITPS/project/.git/
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (master)
+$ git remote add origin https://github.com/dnwhdgk/project.git
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (master)
+$ git remote
+origin
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (master)
+$ git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 613 bytes | 102.00 KiB/s, done.
+From https://github.com/dnwhdgk/project
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (master)
+$ git pull origin main
+From https://github.com/dnwhdgk/project
+ * branch            main       -> FETCH_HEAD
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (master)
+$ git checkout -b branchB
+Switched to a new branch 'branchB'
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (branchB)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (branchB)
+$ git add .
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (branchB)
+$ git commit
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ITPS@DESKTOP-NUOPUIF.(none)')
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (branchB)
+$ git commit -m "asldjf"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ITPS@DESKTOP-NUOPUIF.(none)')
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (branchB)
+$ git config --global user.email "wjswk520@gmail.com"
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (branchB)
+$ git config --global user.name "adsb12"
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (branchB)
+$ git commit -m "asldjf"
+[branchB 1367797] asldjf
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sdf.txt
+
+ITPS@DESKTOP-NUOPUIF MINGW64 ~/project (branchB)
+$ git push -u origin branchB
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 267 bytes | 267.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branchB' on GitHub by visiting:
+remote:      https://github.com/dnwhdgk/project/pull/new/branchB
+remote:
+To https://github.com/dnwhdgk/project.git
+ * [new branch]      branchB -> branchB
+Branch 'branchB' set up to track remote branch 'branchB' from 'origin'.
+
