@@ -64,5 +64,3 @@ re_date	DATE,
 qna_id	INT,
 user_id	VARCHAR(20)
 )
-
-1111e123213
