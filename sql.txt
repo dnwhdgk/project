@@ -9,6 +9,7 @@ CREATE TABLE USERS(
 
 CREATE TABLE AUTHMAIL(
 	user_mail VARCHAR(200) PRIMARY KEY,
+    user_mail VARCHAR(200) PRIMARY KEY,
     auth_num INT
 );
 
@@ -17,6 +18,13 @@ CREATE TABLE REPLY (
     contents    TEXT,
     reg_date    DATE,
 	guest_id  INT,
+CREATE TABLE Review(
+    rev_id    INT PRIMARY KEY AUTO_INCREMENT,
+    rev_title VARCHAR(20),
+    rev_contents    TEXT,
+    rev_date    DATE,
+    accom_id INT,
+    room_id  INT,
     user_id INT,
     likey_id INT
 );
@@ -28,6 +36,13 @@ guest_type VARCHAR(20),
 guest_name VARCHAR(50),
 guest_img TEXT,
 guest_peo INT
+CREATE TABLE ROOM(
+room_id INT PRIMARY KEY,
+room_num INT,
+room_name VARCHAR(20),
+room_text VARCHAR(50),
+room_img TEXT,
+room_text TEXT
 );
 
 CREATE TABLE PRICE(
@@ -44,16 +59,23 @@ guest_t_name VARCHAR(50),
 guest_t_add TEXT,
 guest_t_img TEXT,
 guest_id VARCHAR(20)
+CREATE TABLE ACCOMDATION(
+accom_id INT PRIMARY KEY,
+accom_name VARCHAR(50),
+accom_add TEXT,
+accom_img TEXT,
+accom_text VARCHAR(20)
 );
 
 CREATE TABLE RESERVATION(
-resev_id INT PRIMARY KEY,
-resev_status VARCHAR(30),
+@@ -52,22 +46,21 @@ resev_status VARCHAR(30),
 resev_st DATE,
 resev_end DATE,
 user_id VARCHAR(20),
 price_id INT,
 guest_id INT
+accom_id INT,
+room_id INT
 );
 
 CREATE TABLE LIKEY (
@@ -61,6 +83,12 @@ likey_id INT PRIMARY KEY,
 guest_id INT,
 user_id VARCHAR(20)
 );
+CREATE TABLE QNA(
+qna_id 	INT PRIMARY KEY AUTO_INCREMENT,
+qna_tit	VARCHAR(20),
+qna_con TEXT,
+qna_date DATE
+)
 
 CREATE TABLE PAY(
 pay_id INT PRIMARY KEY,
@@ -71,7 +99,10 @@ pay_approval INT,
 pay_date DATE,
 resev_id INT
 );
-
-
-
-12313132
+CREATE TABLE REPLY(
+re_id	INT PRIMARY KEY AUTO_INCREMENT,
+re_con	TEXT,
+re_date	DATE,
+qna_id	INT,
+user_id	VARCHAR(20)
+)
