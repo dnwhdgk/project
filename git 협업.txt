@@ -39,3 +39,9 @@ git push -u orgin branch1
 9. 원격 저장소에서 pull request 생성
 10. 생성된 pull request를 승인
 11. master에 등록됨 
+
+
+
+
+git checkout -b branch명 은 브랜치를 만드는 명령어
+git checkout branch명 은 만든 브랜치로 이동하는 명령어
