@@ -140,7 +140,7 @@ $(function () {
         .animate({ width: "650px", height: "700px" }, 800);
     }
   });
-  // 실시간으로 객실현황 이미지 확대
+  // 객실현황 이미지 확대
   var key05 = 0;
   $(window).scroll(function () {
     var sct = $(document).scrollTop();
@@ -153,4 +153,5 @@ $(function () {
         .animate({ width: "650px", height: "700px" }, 800);
     }
   });
+
 });
